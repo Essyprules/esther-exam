@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLICATION PAGE - FRESH STUDENTS</title>
+</head>
+
+<style>
+    body {
+        background-image: url("../images/Secondary-Students.jpg");
+        background-size: cover;
+    }
+
+    #freshform {
+        background-color: white;
+        width: 30%;
+        height: 70vh;
+        border-radius: 10px;
+        margin-top: 60px;
+        font-family: serif;
+    }
+
+    #form1 {
+        padding-top: 20px;
+        text-align: justify;
+        padding-left: 20px;
+    }
+
+    #btn1 {
+        font-size: large;
+        font-weight: bold;
+        font-family: serif;
+        background-color: white;
+        color: rgba(30, 150, 30, 0.9);
+        margin-top: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(30, 150, 30, 0.9);
+    }
+</style>
+
+<body>
+    <center>
+        <div id="freshform">
+            <form action="">
+                <div>
+                    <h3 style="border-bottom: 5px solid; border-color: rgba(30, 150, 30, 0.9);">
+                        Fresh Students Application Form</h3>
+                </div>
+                <div id="form1">
+                    <label for="">Last Name</label>
+                    <input type="text" id="lname"> <br>
+                    <br>
+                    <label for="">First Name</label>
+                    <input type="text" id="fname"> <br>
+                    <br>
+                    <label for="">Middle Name</label>
+                    <input type="text" id="mname"> <br>
+                    <br>
+                    <label for="">Date of Birth</label>
+                    <input type="date" id="dob"> <br>
+                    <br>
+                    <label for="">Gender</label>
+                    <select name="gender" id="gen"> <br>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select> <br>
+                    <br>
+                    <label for="">Parent's Phone Number</label>
+                    <input type="number" id="ppn"> <br>
+                    <br>
+                </div>
+                <button id="btn1" onclick="sign(event)">SUBMIT</button>
+            </form>
+        </div>
+    </center>
+</body>
+<script>
+    function sign(e) {
+        e.preventDefault();
+
+        var lna = document.getElementById("lname").value;
+        var fnm = document.getElementById("fname").value;
+        var mid = document.getElementById("mname").value;
+        var db = document.getElementById("dob").value;
+        var gend = document.getElementById("gen").value;
+        var numb = document.getElementById("ppn").value;
+        var allFieldsFilled = true;
+        var fields = document.querySelectorAll('input[type="text"], input[type="date"] input[type="number"]');
+        for (var i = 0; i < fields.length; i++) {
+            if (fields[i].value.trim() === "") {
+                allFieldsFilled = false;
+                break;
+            }
+        }
+
+
+        if (allFieldsFilled) {
+
+            var dataObject = {
+                surname: lna,
+                firstname: fnm,
+                middlename: mid,
+                dateofbirth: db,
+                gender: gend,
+                number: numb
+            };
+
+            localStorage.setItem('user', JSON.stringify(dataObject));
+            location.href = "index.html";
+                alert("Welcome" + " " + lna + " " + fnm + " " + mid);
+        } else {
+            alert("Input all fields");
+        }
+    }
+</script>
+
+</html>

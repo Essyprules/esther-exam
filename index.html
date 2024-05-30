@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREENSPRINGS SCHOOL</title>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        width: 100%;
+        height: 5vh;
+        position: relative;
+        bottom: 12vh;
+        left: 125vh;
+
+    }
+
+    li {
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+        color: black;
+        margin-right: 30px;
+        font-family: serif;
+        font-size: larger;
+    }
+
+    a:hover {
+        background-color: rgba(30, 150, 30, 0.9);
+        color: white;
+    }
+
+    #div2 {
+        position: relative;
+        width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 150, 30, 0.637);
+        overflow: hidden;
+        width: 0;
+        height: 70%;
+        transition: .8s ease;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+        size: 100%;
+        position: relative;
+        top: 0%;
+    }
+
+
+    #div2:hover .overlay {
+        width: 50%;
+    }
+</style>
+
+<body>
+    <div id="div1">
+        <img src="../images/logo.PNG" alt="">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="aboutuspage.html">ABOUT US</a></li>
+            <li><a href="applicationpage.html">APPLY</a></li>
+            <li><a href="subjects.html">DEPARTMENTS</a></li>
+        </ul>
+    </div>
+    <div id="div2">
+        <img src="../images/greenspring.PNG" alt="" class="img">
+        <div class="overlay">
+            <div class="text">
+                <h3>WELCOME TO GREENSPRINGS SCHOOL</h3>
+                Our mission is to lead holistic, inclusive, <br>innovative world-class education in Africa. For this <br> reason,
+                we have adopted different approaches and <br> tools that make learning enjoyable for our  <br>students. These
+                approaches and tools include the <br> use of activity-based learning, virtual learning environment, <br> among
+                others. In addition to that, we <br> are the first Thinking School in Nigeria, <br> and we encourage our students
+                to be <br> critical thinkers.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
