@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBJECTS</title>
 </head>
+
+<style>
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        width: 100%;
+        height: 5vh;
+        position: relative;
+        bottom: 12vh;
+        left: 125vh;
+
+    }
+
+    li {
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+        color: black;
+        margin-right: 30px;
+        font-family: serif;
+        font-size: larger;
+    }
+
+    a:hover {
+        color: white;
+        background-color: rgba(30, 150, 30, 0.9);
+    }
+
+    h4 {
+        color: black;
+        font-family: 'serif';
+        font-weight: bolder;
+        font-size: xx-large;
+        border-bottom: 5px solid;
+        border-color: rgba(30, 150, 30, 0.9);
+    }
+
+    h3 {
+        font-weight: bold;
+        color: navy;
+        text-shadow: 10px;
+    }
+
+    .arrow {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    #downarrow {
+        display: none;
+        position: relative;
+        left: 40px;
+        background-color: #f9f9f9;
+        width: 13vh;
+        height: 50vh;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    #downarrow2 {
+        display: none;
+        position: relative;
+        left: 40px;
+        background-color: #f9f9f9;
+        width: 13vh;
+        height: 50vh;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    #downarrow3 {
+        display: none;
+        position: relative;
+        left: 40px;
+        background-color: #f9f9f9;
+        width: 13vh;
+        height: 50vh;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+</style>
+
 <body>
-    
-</body>
+
+    </style>
+
+    <body>
+        <div id="div1">
+            <img src="../images/logo.PNG" alt="">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutuspage.html">ABOUT US</a></li>
+                <li><a href="applicationpage.html">APPLY</a></li>
+                <li><a href="subjects.html">DEPARTMENTS</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>DEPARTMENTS</h4>
+        </div>
+        <div>
+            <h3>SCIENCE DEPARTMENT <i class="arrow down" onclick="disp()"></i></h3>
+            <ol id="downarrow">
+                <li>Mathematics</li>
+                <li>English</li>
+                <li>Biology</li>
+                <li>Chemistry</li>
+                <li>Physics</li>
+                <li>Civic</li>
+                <li>Agirc/Food & Nutrition</li>
+                <li>Geography</li>
+                <li>Further Maths</li>
+                <li>Technical Drawing</li>
+            </ol>
+        </div>
+        <div>
+            <h3>COMMERCIAL DEPARTMENT <i class="arrow down" onclick="showme()"></i></h3>
+            <ol id="downarrow2">
+                <li>Mathematics</li>
+                <li>English</li>
+                <li>Commerce</li>
+                <li>Economics</li>
+                <li>Accounting</li>
+                <li>Civic</li>
+                <li>Agirc/Food & Nutrition</li>
+                <li>Further Maths</li>
+                <li>Government</li>
+            </ol>
+        </div>
+        <div>
+            <h3>ART DEPARTMENT <i class="arrow down" onclick="show()"></i></h3>
+            <ol id="downarrow3">
+                <li>Mathematics</li>
+                <li>English</li>
+                <li>Literature</li>
+                <li>Government</li>
+                <li>Commerce</li>
+                <li>Civic</li>
+                <li>Agirc/Food & Nutrition</li>
+            </ol>
+        </div>
+    </body>
+    <script>
+        function disp() {
+            document.getElementById("downarrow").style.display = "block";
+            document.getElementById("downarrow2").style.display = "none";
+            document.getElementById("downarrow3").style.display = "none";
+        }
+        function showme() {
+            document.getElementById("downarrow2").style.display = "block";
+            document.getElementById("downarrow").style.display = "none";
+            document.getElementById("downarrow3").style.display = "none";
+        }
+        function show() {
+            document.getElementById("downarrow3").style.display = "block";
+            document.getElementById("downarrow").style.display = "none";
+            document.getElementById("downarrow2").style.display = "none";
+        }
+    </script>
+
 </html>
